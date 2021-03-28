@@ -1,4 +1,5 @@
 <!-- < bj *ngIf="products; else noProduct"> {{ title}} </h3> -->
+<app-category></app-category>
 <input class="form-control" 
 id="productName"
  placeholder="Ürün Arayalım.."
@@ -14,7 +15,7 @@ id="productName"
     </div>
   </ng-template>
 
-  <div *ngFor="let product of products | productFilter:filterText" class="card" style="width: 18rem;">
+  <div *ngFor="let product of products | productFilter:filterText" class="card" style="width: 18rem; padding:15px; margin:15px;">
     <img [src]="product.imageUrl" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title"> {{ product.name |uppercase }} {{ product.price | currency}} </h5>
