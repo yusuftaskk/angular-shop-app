@@ -1,24 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from "@angular/common/http"
 import { AlertifyService } from "../services/alertify.service"
+import { ProductService } from '../services/product.service';
 import { Product } from './product';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css']
+  styleUrls: ['./product.component.css'],
+  providers:[ProductService]
 })
 export class ProductComponent implements OnInit {
 
-  constructor(private alertifyService: AlertifyService, private http: HttpClient) { }
+  constructor(private alertifyService: AlertifyService,
+    private productService: ProductService) { }
   filterText = ""
   title = "Ürün Listesi"
   products: Product[];
-  baseUrl = "http://localhost:3000/products"
 
   ngOnInit(): void {
-    this.http.get<Product[]>(this.baseUrl).subscribe(data => {
-      this.products = data;
-    })
+   this.productService.getProducts().subscribe(data=> {
+     this.products = data
+     console.log('data :>> ', data);
+   });
   }
   addToCart(product) {
     this.alertifyService.success(product.name + " eklendi")
