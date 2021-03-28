@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from './product';
-
+import { AlertifyService } from "../services/alertify.service"
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -8,7 +8,7 @@ import { Product } from './product';
 })
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+  constructor(private alertifyService: AlertifyService) { }
   filterText = ""
   title = "Ürün Listesi"
   products: Product[] = [
@@ -22,6 +22,9 @@ export class ProductComponent implements OnInit {
     { id: 2, name: "mouse", price: 25, categoryId: 2, description: "none", imageUrl: "https://cdn.akakce.com/monster/monster-abra-a5-v16-4-i5-9300h-8-gb-250-gb-ssd-gtx1650-15-6-full-hd-notebook-z.jpg" }
   ]
   ngOnInit(): void {
+  }
+  addToCart(product) {
+    this.alertifyService.success(product.name + " eklendi")
   }
 
 }
