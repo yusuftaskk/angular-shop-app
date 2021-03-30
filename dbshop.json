@@ -23,6 +23,22 @@
       "imageUrl": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&amp;hei=1112&amp;fmt=jpeg&amp;qlt=80&amp;op_usm=0.5,0.5&amp;.v=1604021663000",
       "categoryId": "2",
       "id": 3
+    },
+    {
+      "name": "İpad 2 ",
+      "description": "İpad 2",
+      "imageUrl": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ipad-mini-select-wifi-spacegray-201911_GEO_TR_FMT_WHH?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1574901815980",
+      "price": "2000",
+      "categoryId": "2",
+      "id": 4
+    },
+    {
+      "name": "İpad 2 ",
+      "description": "İpad 2",
+      "imageUrl": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ipad-mini-select-wifi-spacegray-201911_GEO_TR_FMT_WHH?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1574901815980",
+      "price": "2000",
+      "categoryId": "2",
+      "id": 5
     }
   ],
   "categories": [
