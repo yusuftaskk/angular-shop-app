@@ -10,7 +10,11 @@ import { ProductFilterPipe } from './product/product-filter.pipe';
 import { from } from 'rxjs';
 import {HttpClientModule} from "@angular/common/http";
 import { ProductAddForms1Component } from './product/product-add-forms1/product-add-forms1.component';
-import { ProductAddReactiveForm2Component } from './product/product-add-reactive-form2/product-add-reactive-form2.component'
+import { ProductAddReactiveForm2Component } from './product/product-add-reactive-form2/product-add-reactive-form2.component';
+import { LoginComponent } from './login/login.component'
+import { AlertifyService } from './services/alertify.service';
+import { AccountService } from './account.service';
+import { LoginGuard } from './login/login.guard';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +23,8 @@ import { ProductAddReactiveForm2Component } from './product/product-add-reactive
     ProductComponent,
     ProductFilterPipe,
     ProductAddForms1Component,
-    ProductAddReactiveForm2Component
+    ProductAddReactiveForm2Component,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -27,8 +32,10 @@ import { ProductAddReactiveForm2Component } from './product/product-add-reactive
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule
+    
+    
   ],
-  providers: [],
+  providers: [AlertifyService,AccountService,LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
