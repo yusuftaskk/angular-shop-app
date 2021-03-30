@@ -15,8 +15,8 @@ id="productName"
     </div>
   </ng-template>
 
-  <div *ngFor="let product of products | productFilter:filterText" class="card" style="width: 18rem; padding:15px; margin:15px;">
-    <img [src]="product.imageUrl" class="card-img-top" alt="...">
+  <div *ngFor="let product of products | productFilter:filterText" class="card" style=" padding:15px; margin:15px;">
+    <img [src]="product.imageUrl" class="card-img-top img" alt="...">
     <div class="card-body">
       <h5 class="card-title"> {{ product.name |uppercase }} {{ product.price | currency}} </h5>
       <p class="card-text"> {{ product.description }} </p>

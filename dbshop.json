@@ -1,5 +1,6 @@
 {
-  "products": [{
+  "products": [
+    {
       "id": 1,
       "name": "laptop",
       "price": 2500,
@@ -14,10 +15,18 @@
       "categoryId": 2,
       "description": "none",
       "imageUrl": "https://cdn.akakce.com/monster/monster-abra-a5-v16-4-i5-9300h-8-gb-250-gb-ssd-gtx1650-15-6-full-hd-notebook-z.jpg"
+    },
+    {
+      "name": "İphone 12 ",
+      "description": "İphone 12 Series",
+      "price": "12.000",
+      "imageUrl": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&amp;hei=1112&amp;fmt=jpeg&amp;qlt=80&amp;op_usm=0.5,0.5&amp;.v=1604021663000",
+      "categoryId": "2",
+      "id": 3
     }
-
   ],
-  "categories": [{
+  "categories": [
+    {
       "id": 1,
       "name": "Bilgisayar"
     },
